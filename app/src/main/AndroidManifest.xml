@@ -13,8 +13,20 @@
         android:theme="@style/Theme.DevDoc"
         tools:targetApi="31">
         <activity
+            android:name=".Administrador.AgregarCategoria"
+            android:exported="false" />
+        <activity
+            android:name=".Administrador.Login_admin"
+            android:exported="false" />
+        <activity
+            android:name=".Administrador.Registrar_admin"
+            android:exported="false" />
+        <activity
+            android:name=".Elegir_rol"
+            android:exported="false" />
+        <activity
             android:name=".Bienvenida"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,3 +1,42 @@
 <resources>
     <string name="app_name">DevDoc</string>
+
+    <string name="menu_panel">Panel</string>
+    <string name="menu_cuenta">Cuenta</string>
+    <string name="titulo_rl_admin">Título</string>
+    <string name="txt_rol">Elegir un rol</string>
+    <string name="btn_rol_administrador">Administrador</string>
+    <string name="btn_rol_cliente">Cliente</string>
+
+
+    <string name="Menu_panel">Panel</string>
+    <string name="Menu_cuenta">Cuenta</string>
+
+    <string name="Titulo_RL_admin">Titulo</string>
+
+    <!--Menu Admin-->
+    <string name="Txt_registro_admin">Registro de administrador</string>
+    <string name="Et_nombres_admin">Nombres</string>
+    <string name="Et_email_admin">Email</string>
+    <string name="Et_password_admin">Contraseña</string>
+    <string name="Et_R_password_admin">Repetir contraseña</string>
+    <string name="Btn_registrar_admin">Registrarme</string>
+
+    <string name="CerrarSesionAdmin">Cerrar Sesion</string>
+
+    <string name="TxtLoginAdmin">Login Administradores</string>
+    <string name="Btn_login_admin">Ingresar</string>
+    <string name="Txt_tengo_cuenta">Tengo una cuenta</string>
+
+    <string name="Btn_agregar_categoria">Agregar categoria</string>
+    <string name="Txt_agregar_categoria">Agregar categoria</string>
+    <string name="Et_categoria">Ingrese una categoria</string>
+    <string name="Agregar_categoria_Bd">Agregar</string>
+
+    <string name="Item_nombre_c_a">Nombre categoria</string>
+    <string name="Buscar_categoria">Buscar categoria</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 </resources>
