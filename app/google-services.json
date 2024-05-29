@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "116245695929",
+    "project_id": "devdoc-ece37",
+    "storage_bucket": "devdoc-ece37.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:116245695929:android:8f041e1b7acb0cbc39fa68",
+        "android_client_info": {
+          "package_name": "com.gfg.devdoc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyyl6kdCxeyeYwpao5pQj_7jITw4mBFz0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

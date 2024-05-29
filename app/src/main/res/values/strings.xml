@@ -35,6 +35,26 @@
 
     <string name="Item_nombre_c_a">Nombre categoria</string>
     <string name="Buscar_categoria">Buscar categoria</string>
+
+
+    <string name="Txt_agregar_pdf">Aregar pdf</string>
+
+    <string name="Et_titulo_pdf">Titulo pdf</string>
+    <string name="Et_descripcion_pdf">Descripcion</string>
+    <string name="Tv_categoria_pdf">Categoria</string>
+    <string name="Btn_subir_pdf">Subir</string>
+
+    <string name="Txt_titulo_libro">Documentaciones</string>
+    <string name="Txt_categoria_libro">Categoria</string>
+    <string name="Et_buscar_libro_admin">Buscar documentacion</string>
+
+
+
+    <string name="Txt_titulo_libro_item">Documentacion</string>
+    <string name="Txt_descripcion_libro_item">Descripcion</string>
+    <string name="Txt_categoria_libro_admin">Categoria</string>
+    <string name="Txt_fecha_libro_item">dd/MM/yyyy</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
