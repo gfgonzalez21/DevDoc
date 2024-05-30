@@ -45,6 +45,9 @@ class Bienvenida : AppCompatActivity() {
                         if (rol=="admin"){
                             startActivity(Intent(this@Bienvenida,MainActivity::class.java))
                             finishAffinity()
+                        }else if (rol=="cliente"){
+                            startActivity(Intent(this@Bienvenida,MainActivityCliente::class.java))
+                            finishAffinity()
                         }
 
                     }

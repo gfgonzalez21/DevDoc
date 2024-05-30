@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityCliente">
+    <RelativeLayout
+        android:id="@+id/toolbarRLCliente"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m_toolbar_height">
+        <TextView
+            android:id="@+id/Titulo_RL_cliente"
+            android:text="@string/Titulo_RL_cliente"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:background="#ccc"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fragments_cliente"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarRLCliente"
+        android:layout_above="@+id/view2"/>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ccc"
+        android:layout_above="@+id/button_Nv_cliente"/>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/button_Nv_cliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_botton_cliente" />
+</RelativeLayout>

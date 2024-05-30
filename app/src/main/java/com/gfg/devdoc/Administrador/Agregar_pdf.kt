@@ -188,6 +188,7 @@ class Agregar_pdf : AppCompatActivity() {
         intent.action=Intent.ACTION_GET_CONTENT
         pdfActivityRL.launch(intent)
     }
+
     val pdfActivityRL =registerForActivityResult(
         ActivityResultContracts.StartActivityForResult(),
         ActivityResultCallback<ActivityResult> {resultado->
@@ -199,4 +200,6 @@ class Agregar_pdf : AppCompatActivity() {
 
         }
     )
+
+
 }

@@ -39,7 +39,7 @@
 
     <string name="Txt_agregar_pdf">Aregar pdf</string>
 
-    <string name="Et_titulo_pdf">Titulo pdf</string>
+    <string name="Et_titulo_pdf">Titulo</string>
     <string name="Et_descripcion_pdf">Descripcion</string>
     <string name="Tv_categoria_pdf">Categoria</string>
     <string name="Btn_subir_pdf">Subir</string>
@@ -49,14 +49,69 @@
     <string name="Et_buscar_libro_admin">Buscar documentacion</string>
 
 
-
     <string name="Txt_titulo_libro_item">Documentacion</string>
     <string name="Txt_descripcion_libro_item">Descripcion</string>
     <string name="Txt_categoria_libro_admin">Categoria</string>
     <string name="Txt_fecha_libro_item">dd/MM/yyyy</string>
 
+
+    <string name="Txt_actualizar_libro">Actualizar Documentacion</string>
+    <string name="Btn_actualizar_libro">Actualizar Documentacion</string>
+    <string name="Txt_detalle_libro">Detalle Documentacion</string>
+
+    <string name="titulo_libro_D">Titulo</string>
+    <string name="Txt_categoria_D">Categoria: </string>
+    <string name="categoria_D">--</string>
+    <string name="Txt_fecha_D">Publicado: </string>
+    <string name="fecha_D">--</string>
+    <string name="Txt_vistas_D">Visitas: </string>
+    <string name="vistas_D">--</string>
+    <string name="Txt_descripcion_D">Descripcion: </string>
+    <string name="descripcion_D">--</string>
+    <string name="Txt_descargas_D">Descargas: </string>
+    <string name="descargas_D">--</string>
+
+
+    <string name="Btn_leer_libro">Leer</string>
+
+    <string name="Txt_leer_libro">Lectura de documentacion</string>
+
+    <string name="nombres_admin">Nombres: </string>
+    <string name="Txt_nombres_admin"> -- </string>
+    <string name="email_admin">Email: </string>
+    <string name="Txt_email_admin"> -- </string>
+    <string name="tiempo_registro_admin">Miembro desde: </string>
+    <string name="Txt_tiempo_registro_admin"> -- </string>
+    <string name="rol_admin">Rol: </string>
+    <string name="Txt_rol_admin"> -- </string>
+
+    <string name="Txt_registro_cliente">Registro cliente</string>
+    <string name="Et_nombres_cliente">Nombres</string>
+    <string name="Et_edad_cliente">Edad</string>
+    <string name="Et_email_cliente">Email</string>
+    <string name="Et_password_cliente">Contraseña</string>
+    <string name="Et_R_password_cliente">Repetir contraseña</string>
+    <string name="Btn_registrar_cliente">Registrarme</string>
+
+    <string name="Menu_dashboard_cl">Dashboard</string>
+    <string name="Menu_favoritos_cl">Favoritos</string>
+    <string name="Menu_cuenta_cl">Cuenta</string>
+    <string name="Titulo_RL_cliente">Titulo</string>
+    <string name="CerrarSesionCliente">Cerrar Sesion</string>
+
+    <string name="TxtLoginCliente">Login Clientes</string>
+    <string name="Btn_login_cliente">Ingresar</string>
+
+
+
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="next">Next</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet</string>
+    <string name="previous">Previous</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="hello_blank_fragment">Hello Blank Fragment</string> <!-- Añade esta línea -->
+
 
 
 </resources>

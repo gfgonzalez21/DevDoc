@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cliente.Login_cliente">
+
+    <!--toolbar-->
+    <RelativeLayout
+        android:id="@+id/toolbarRLClienteL"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m_toolbar_height">
+
+        <ImageButton
+            android:src="@drawable/ic_regresar"
+            android:id="@+id/Ib_regresar"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/TxtLoginCliente" />
+        <View
+            android:background="#ccc"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+    </RelativeLayout>
+    <!--credenciales-->
+    <RelativeLayout
+        android:layout_below="@+id/toolbarRLClienteL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Email-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp">
+
+
+                <EditText
+                    android:inputType="textEmailAddress"
+                    android:id="@+id/Et_email_cliente"
+                    android:hint="@string/Et_email_cliente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--Contraseña-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:passwordToggleEnabled="true"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp">
+
+
+                <EditText
+                    android:inputType="textPassword"
+                    android:id="@+id/Et_password_cliente"
+                    android:hint="@string/Et_password_cliente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--Boton Inicio Sesion-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Btn_login_cliente"
+                android:textAllCaps="true"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:text="@string/Btn_login_cliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </RelativeLayout>
+</RelativeLayout>

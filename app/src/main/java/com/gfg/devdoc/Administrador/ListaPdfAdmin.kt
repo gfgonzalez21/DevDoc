@@ -35,7 +35,23 @@ class ListaPdfAdmin : AppCompatActivity() {
         binding.IbRegresar.setOnClickListener{
             onBackPressedDispatcher.onBackPressed()
         }
+
         ListarLibros()
+        binding.EtBuscarLibroAdmin.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(libro: CharSequence?, start: Int, before: Int, count: Int) {
+                try {
+                    adaptadorPdfAdmin.filter.filter(libro)
+                }catch (e:Exception){
+
+                }
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+            }
+        })
 
     }
     private fun ListarLibros() {
@@ -56,7 +72,6 @@ class ListaPdfAdmin : AppCompatActivity() {
                 }
 
                 override fun onCancelled(error: DatabaseError) {
-                    TODO("Not yet implemented")
                 }
             })
     }

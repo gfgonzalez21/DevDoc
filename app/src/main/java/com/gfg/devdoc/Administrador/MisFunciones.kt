@@ -1,9 +1,12 @@
 package com.gfg.devdoc.Administrador
 
 import android.app.Application
+import android.app.ProgressDialog
+import android.content.Context
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 import com.github.barteksc.pdfviewer.PDFView
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -26,7 +29,7 @@ class MisFunciones: Application() {
             return  android.text.format.DateFormat.format("dd/MM/yyyy",cal).toString()
 
         }
-        fun CargarPdfUrl(pdfUrl: String, pdfTitulo: String, pdfView: PDFView, progressBar: ProgressBar, paginaTv: TextView?) {
+        fun CargarPdfUrl(pdfUrl: String, pdfTitulo: String, pdfView: PDFView, progressBar: ProgressBar) {
 
 
             val ref = FirebaseStorage.getInstance().getReferenceFromUrl(pdfUrl)
@@ -45,10 +48,7 @@ class MisFunciones: Application() {
                             progressBar.visibility = View.INVISIBLE
                         }
                         .onLoad { pagina ->
-                            progressBar.visibility = View.INVISIBLE
-                            if (paginaTv != null) {
-                                paginaTv.text = "$pagina"
-                            }
+
                         }
                         .load()
                 }
@@ -69,6 +69,35 @@ class MisFunciones: Application() {
                         TODO("Not yet implemented")
                     }
                 })
+        }
+
+
+        fun EliminarLibro(context: Context, idLibro : String, urlLibro:String, tituloLibro:String){
+
+            val progressDialog = ProgressDialog(context)
+            progressDialog.setTitle("Espere por favor")
+            progressDialog.setMessage("Eliminado $tituloLibro")
+            progressDialog.setCanceledOnTouchOutside(false)
+            progressDialog.show()
+
+            val storageReference =FirebaseStorage.getInstance().getReferenceFromUrl(urlLibro)
+            storageReference.delete()
+                .addOnSuccessListener {
+                    val ref=FirebaseDatabase.getInstance().getReference("Libros")
+                    ref.child(idLibro)
+                        .removeValue()
+                        .addOnSuccessListener {
+                            progressDialog.dismiss()
+                            Toast.makeText(context,"la documentacion se ha eliminado con exito ", Toast.LENGTH_SHORT).show()
+                        }
+                        .addOnFailureListener {e->
+                            Toast.makeText(context,"Fallo la eliminacion debido a ${e.message}", Toast.LENGTH_SHORT).show()
+                        }
+                }
+                .addOnFailureListener {e->
+                    progressDialog.dismiss()
+                    Toast.makeText(context,"Fallo la eliminacion debido a ${e.message}", Toast.LENGTH_SHORT).show()
+                }
         }
 }
 }
