@@ -47,7 +47,7 @@
     <string name="Txt_titulo_libro">Documentaciones</string>
     <string name="Txt_categoria_libro">Categoria</string>
     <string name="Et_buscar_libro_admin">Buscar documentacion</string>
-
+    <string name="Et_buscar_libro_cliente">Buscar documentacion</string>
 
     <string name="Txt_titulo_libro_item">Documentacion</string>
     <string name="Txt_descripcion_libro_item">Descripcion</string>
@@ -102,6 +102,31 @@
     <string name="TxtLoginCliente">Login Clientes</string>
     <string name="Btn_login_cliente">Ingresar</string>
 
+    <string name="Item_nombre_c_c">Nombre categoria</string>
+
+    <string name="Buscar_categoria_cliente">Buscar categoria</string>
+
+    <string name="Btn_favoritos_cliente">Agregar a favoritos</string>
+    <string name="Btn_leer_libro_cliente">Leer</string>
+    <string name="Btn_descargar_cliente">Descargar</string>
+
+    <string name="nombres_cliente">Nombres: </string>
+    <string name="Txt_nombres_cliente"> -- </string>
+    <string name="email_cliente">Email: </string>
+    <string name="Txt_email_cliente"> -- </string>
+    <string name="tiempo_registro_cliente">Miembro desde: </string>
+    <string name="Txt_tiempo_registro_cliente"> -- </string>
+    <string name="rol_cliente">Rol: </string>
+    <string name="Txt_rol_cliente"> -- </string>
+
+
+
+
+
+
+
+
+
 
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -111,7 +136,6 @@
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="hello_blank_fragment">Hello Blank Fragment</string> <!-- Añade esta línea -->
-
 
 
 </resources>

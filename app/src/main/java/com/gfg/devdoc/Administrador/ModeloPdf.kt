@@ -10,6 +10,7 @@ class ModeloPdf {
     var tiempo :Long=0
     var contadorVisitas :Long=0
     var contadorDescargas:Long=0
+    var esfavorito=false
 
     constructor()
     constructor(
@@ -20,7 +21,8 @@ class ModeloPdf {
         categoria: String,
         url: String,
         tiempo: Long,
-        contadorVisitas: Long
+        contadorVisitas: Long,
+        esfavorito:Boolean
     ) {
         this.uid = uid
         this.id = id
@@ -31,5 +33,6 @@ class ModeloPdf {
         this.tiempo = tiempo
         this.contadorVisitas = contadorVisitas
         this.contadorDescargas=contadorDescargas
+        this.esfavorito=esfavorito
     }
 }

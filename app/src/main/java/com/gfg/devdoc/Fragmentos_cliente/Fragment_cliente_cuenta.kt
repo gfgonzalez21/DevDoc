@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.gfg.devdoc.Administrador.MisFunciones
 import com.gfg.devdoc.Elegir_rol
 import com.gfg.devdoc.R
 import com.gfg.devdoc.databinding.FragmentClienteCuentaBinding
@@ -36,6 +37,8 @@ class Fragment_cliente_cuenta : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         firebaseAuth=FirebaseAuth.getInstance()
+
+        cargarInformacion()
         binding.CerrarSesionCliente.setOnClickListener{
             firebaseAuth.signOut()
             startActivity(Intent(context, Elegir_rol::class.java))
@@ -43,4 +46,31 @@ class Fragment_cliente_cuenta : Fragment() {
         }
     }
 
+    private fun cargarInformacion() {
+        val ref = FirebaseDatabase.getInstance().getReference("Usuarios")
+        ref.child("${firebaseAuth.uid}")
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    val nombres="${snapshot.child("nombres").value}"
+                    val email="${snapshot.child("email").value}"
+                    var t_registro="${snapshot.child("tiempo_registro").value}"
+                    val rol="${snapshot.child("rol").value}"
+
+                    if (t_registro=="null"){
+                        t_registro="0"
+                    }
+                    val formatoFecha= MisFunciones.formatoTiempo(t_registro.toLong())
+                    binding.TxtNombresCliente.text=nombres
+                    binding.TxtEmailCliente.text=email
+                    binding.TxtTiempoRegistroCliente.text=formatoFecha
+                    binding.TxtRolCliente.text=rol
+
+
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    TODO("Not yet implemented")
+                }
+            })
+    }
 }

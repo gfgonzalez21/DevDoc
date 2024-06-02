@@ -1,20 +1,23 @@
-package com.gfg.devdoc.Administrador
+package com.gfg.devdoc.Cliente
 
 import android.widget.Filter
+import com.gfg.devdoc.Administrador.AdaptadorCategoria
+import com.gfg.devdoc.Administrador.ModeloCategoria
 
-class FiltroCategoria : Filter{
+class FiltrarCategoria_Cliente :Filter{
+
 
     private var filtroLista : ArrayList<ModeloCategoria>
-    private var adaptadorCategoria: AdaptadorCategoria
+    private var adaptadorCategoriaCliente: AdaptadorCategoria_cliente
 
-    constructor(filtroLista: ArrayList<ModeloCategoria>, adaptadorCategoria: AdaptadorCategoria) {
+    constructor(filtroLista: ArrayList<ModeloCategoria>, adaptadorCategoriaCliente: AdaptadorCategoria_cliente) {
         this.filtroLista = filtroLista
-        this.adaptadorCategoria = adaptadorCategoria
+        this.adaptadorCategoriaCliente = adaptadorCategoriaCliente
     }
 
-    override fun performFiltering(categoria: CharSequence?): FilterResults {
+    override fun performFiltering(categoria: CharSequence?): Filter.FilterResults {
         var categoria = categoria
-        var resultados=FilterResults()
+        var resultados= Filter.FilterResults()
 
         if (categoria!=null && categoria.isNotEmpty()){
             categoria=categoria.toString().uppercase()
@@ -34,11 +37,9 @@ class FiltroCategoria : Filter{
         return resultados
     }
 
-    override fun publishResults(p0: CharSequence?, resultados: FilterResults) {
-        adaptadorCategoria.categoriaArrayList=resultados.values as ArrayList<ModeloCategoria>
-        adaptadorCategoria.notifyDataSetChanged()
+    override fun publishResults(p0: CharSequence?, resultados: Filter.FilterResults) {
+        adaptadorCategoriaCliente.categoriaArrayList=resultados.values as ArrayList<ModeloCategoria>
+        adaptadorCategoriaCliente.notifyDataSetChanged()
 
     }
-
-
 }
